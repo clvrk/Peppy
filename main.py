@@ -1,9 +1,9 @@
 import discord
 from discord.ext import commands
 import os
-from dotenv import load_env
+from dotenv import load_dotenv
 
-load_env()
+load_dotenv()
 
 bot = commands.AutoShardedBot(command_prefix=True, help_command=None, case_insensitive=True)
 
