@@ -11,7 +11,7 @@ colors = [0xFFFF33, 0xADFF2F]
 
 @bot.event
 async def on_ready():
-    print(f"{bot} is online")
+    print(f"{bot.user.name} is online")
 
 
 extensions = ['Commands.music']
