@@ -23,7 +23,7 @@ class Devtools(commands.Cog):
         minutes, seconds = divmod(remainder, 60)
         days, hours = divmod(hours, 24)
         up = discord.Embed(title="The Bot Uptime Is:", description=f"`{seconds}s, {minutes}m, {hours}h, {days}d\n`", color = 0xe67e22)
-        ctx.send(embed=up)
+        await ctx.send(embed=up)
      
 
 
