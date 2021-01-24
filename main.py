@@ -16,7 +16,7 @@ async def on_ready():
 
 @bot.command()
 async def ping(ctx):
-    await ctx.reply(f"Pong! Average Latency is `{round(bot.latency * 1000)}ms`!")
+    await ctx.send(f"Pong! Average Latency is `{round(bot.latency * 1000)}ms`!")
 
 
 extensions = ['Commands.music']
