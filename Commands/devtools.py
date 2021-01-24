@@ -16,8 +16,8 @@ class Devtools(commands.Cog):
         self.bot = bot
         self.bot.launch_time = datetime.utcnow()
 
-    @commands.command()
-    async def Uptime(self, ctx):
+    @commands.command(aliases=['u'])
+    async def uptime(self, ctx):
         uptime = datetime.utcnow() - self.bot.launch_time
         hours, remainder = divmod(int(uptime.total_seconds()), 3600)
         minutes, seconds = divmod(remainder, 60)
@@ -30,7 +30,7 @@ class Devtools(commands.Cog):
         if ctx.author.id == 461287425625554950 or 513351917481623572:
             await ctx.send(embed=up)
 
-    @commands.command()
+    @commands.command(aliases=['p'])
     async def ping(self, ctx):
         if ctx.author.id == 461287425625554950 or 513351917481623572:
             before = time.monotonic()
