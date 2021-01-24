@@ -13,12 +13,6 @@ colors = [0xFFFF33, 0xADFF2F]
 async def on_ready():
     print(f"{bot.user.name} is online")
 
-
-@bot.command()
-async def ping(ctx):
-    await ctx.send(f"Pong! Average Latency is `{round(bot.latency * 1000)}ms`!")
-
-
 extensions = ['Commands.music']
 
 
