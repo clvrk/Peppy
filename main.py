@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-bot = commands.AutoShardedBot(command_prefix=True, help_command=None, case_insensitive=True)
+bot = commands.AutoShardedBot(command_prefix='pp!', help_command=None, case_insensitive=True)
 
 colors = [0xFFFF33, 0xADFF2F]
 
