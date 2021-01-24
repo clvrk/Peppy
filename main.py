@@ -7,13 +7,13 @@ load_dotenv()
 
 bot = commands.AutoShardedBot(command_prefix='pp!', help_command=None, case_insensitive=True)
 
-colors = [0xFFFF33, 0xADFF2F]
+colors = [0xFFFF33, 0xADFF2F, 0xe67e22]
 
 @bot.event
 async def on_ready():
     print(f"{bot.user.name} is online")
 
-extensions = ['Commands.music']
+extensions = ['Commands.music', 'Commands.devtools']
 
 
 if __name__ == '__main__':

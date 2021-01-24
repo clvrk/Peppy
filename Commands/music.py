@@ -3,6 +3,8 @@ from discord.ext import commands
 from discord.utils import get
 import nacl
 
+colors = [0xFFFF33, 0xADFF2F, 0xe67e22]
+
 class music(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
