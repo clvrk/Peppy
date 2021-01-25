@@ -30,7 +30,7 @@ class Devtools(commands.Cog):
         if ctx.author.id == 461287425625554950 or 513351917481623572:
             await ctx.send(embed=up)
 
-    @commands.command(aliases=['p'])
+    @commands.command()
     async def ping(self, ctx):
         if ctx.author.id == 461287425625554950 or 513351917481623572:
             before = time.monotonic()
