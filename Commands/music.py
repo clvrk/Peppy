@@ -42,7 +42,10 @@ class music(commands.Cog):
             for file in os.listdir("./"):
                 if file.endswith(".mp3"):
                     os.rename(file, "song.mp3")
-            await voice.play(discord.FFmpegPCMAudio("song.mp3"))
+            try:
+                voice.play(discord.FFmpegPCMAudio("song.mp3"))
+            except:
+                pass
 
         elif vs is None:
             await ctx.send("Join a voice channel first.")
@@ -68,6 +71,7 @@ class music(commands.Cog):
 
     @commands.command(name='pause', aliases=['stop', 's'])
     async def pause_cmd(self, ctx):
+        guild = ctx.guild
         voice = get(self.bot.voice_clients, guild=guild)
         if voice.is_playing():
             await voice.pause()
@@ -76,14 +80,16 @@ class music(commands.Cog):
 
     @commands.command(name='resume', aliases=['r'])
     async def res_cmd(self, ctx):
+        guild = ctx.guild
         voice = get(self.bot.voice_clients, guild=guild)
         if voice.is_paused():
             await voice.resume()
         elif not voice.is_paused():
-            await ctx.send("Do you mean `pp!replay?` the music is currently playing.")
+            await ctx.send("Do you mean `pp!replay?` the music is currently playing or has ended.")
 
     @commands.command(name='end', aliases=['e'])
     async def e_cmd(self, ctx):
+        guild = ctx.guild
         voice = get(self.bot.voice_clients, guild=guild)
         if voice.is_playing():
             await voice.stop()
