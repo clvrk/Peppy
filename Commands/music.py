@@ -43,7 +43,7 @@ class music(commands.Cog):
                 if file.endswith(".mp3"):
                     os.rename(file, "song.mp3")
             try:
-                voice.play(discord.FFmpegPCMAudio("song.mp3"))
+                await voice.play(discord.FFmpegPCMAudio("song.mp3"))
             except:
                 pass
 
